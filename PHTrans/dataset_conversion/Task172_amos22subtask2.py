@@ -11,8 +11,8 @@ def main():
                         default='/home/lwt/data/amos22')
     args = parser.parse_args()
 
-    task_id = 171
-    task_name = "AMOS22st1"
+    task_id = 172
+    task_name = "AMOS22st2"
     foldername = "Task%03.0d_%s" % (task_id, task_name)
 
     out_base = join(nnUNet_raw_data, foldername)
@@ -31,7 +31,7 @@ def main():
     train_image_folder = join(args.dataset_path, "imagesTr")
     train_label_folder = join(args.dataset_path, "labelsTr")
     test_image_folder = join(args.dataset_path, "imagesTs")
-    dataset_info = load_json(join(args.dataset_path, "task1_dataset.json"))
+    dataset_info = load_json(join(args.dataset_path, "task2_dataset.json"))
     train_info = dataset_info['training']
     test_info = dataset_info['test']
     train_ids = []
@@ -48,7 +48,7 @@ def main():
         
     json_dict = OrderedDict()
     json_dict['name'] = "AMOS"
-    json_dict['description'] = "MICCAI2022 Multi-Modality Abdominal Multi-Organ Segmentation Task 1"
+    json_dict['description'] = "MICCAI2022 Multi-Modality Abdominal Multi-Organ Segmentation Task 2"
     json_dict['author'] = "Yuanfeng Ji"
     json_dict['tensorImageSize'] = "3D"
     json_dict['reference'] = "SRIDB x CUHKSZ x HKU x SYSU x LGCHSZ x LGPHSZ"
