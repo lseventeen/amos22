@@ -78,7 +78,6 @@ def main():
     json_dict['numTraining'] = len(train_ids)
     json_dict['numTest'] = len(test_ids)
 
-    
 
     json_dict['training'] = dataset_info['training']
     json_dict['test'] = dataset_info['test']
